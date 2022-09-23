@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink&family=Domine&display=swap" rel="stylesheet">
+    <title>Brushes n Broomsticks</title>
+<style>
+    body{
+        background-image: linear-gradient(rgb(245,230,232), rgb(213,198,224));
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        height: 175vh;
+    }
+    
+    header{
+        width: 100%;
+        height:175px;
+        background-image: linear-gradient( to bottom right,rgb(213, 198, 224), rgb(170,161 , 200), rgb(150, 122, 161));
+        color: white;
+        
+    }
+
+    select {
+        padding: 5px 5px;
+        border: none;
+        border-radius: 4px;
+     }
+
+     input[type=text]{
+        border: none;
+        border-bottom: 2px solid black;
+     }
+
+     input[type=text]:focus {
+        background-color:rgb(213, 198, 224);
+    }
+
+
+    .flex{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+
+    h1{
+        font-family: 'Domine', serif;
+        text-shadow: 2px 5px 5px rgb(177, 196, 255);
+        text-align: center;
+        font-size: 50px;
+        letter-spacing: 2px;
+    }
+
+
+    ul{
+        background-color: rgb(25,42,81);
+    }
+
+    li{
+        font-family: 'Aref Ruqaa Ink', serif;
+        display: inline;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        padding-left: 25px;
+        
+    }
+    
+    #a{
+        width:75%;
+        margin-left: 100px;
+        margin-top: 10px;
+        
+    }
+
+    #b{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+        margin-top: 50%;
+        margin-right:10%;
+        
+    }
+
+    #p{
+        font-size: 40px;
+        font-family: 'Domine', serif;
+    }
+
+    fieldset{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 25px;
+        border-width: 5px;
+        border-radius: 10px;
+        border-color:rgb(150, 122, 161);
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 75% auto;
+    }
+
+    .submit{
+        width: 80px;
+        height: 40px;
+    }
+
+    input[type="button"]{
+        background-color:rgb(25,42,81);
+        border: none;
+        color: white;
+    }
+
+    footer{
+        background-color: rgb(25,42,81);
+        color: white;
+        width: 100%;
+        height: 100px;
+        text-align: center;
+    }
+
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="flex">
+        <h1>Brushes n Broomsticks</h1>
+        <form id="form1">
+            <input class="search" type="text" name="search" placeholder="Search..">
+        </form>
+        </div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About Artist</li>
+                <li>Portfolio</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="grid">
+    <div id="a">
+        <p id="p">Sign Up Today</p>
+        <form>
+            <fieldset>
+                <legend><b>Billing Information</b></legend>
+                    <label id="first">First Name:</label>
+                    <input type="text" id="first" name="fname" required><br><br>
+                    <label id="last">Last Name:</label>
+                    <input type="text" id="last" name="lname" required><br><br>
+                    <label id="addy1">Address Line:</label>
+                    <input type="text" id="addy1" required><br><br>
+                    <label id="addy2">Address Line(2):</label>
+                    <input type="text" id="addy2"><br><br>
+                    <label id="city">City:</label>
+                    <input type="text" id="city" required><br><br>
+                    <label id="state">State:</label>
+                    <select id="state" name="State" required>
+                        <option value="az">Arizona</option>
+                        <option value="ca">California</option>
+                        <option value="nv">Nevada</option>
+                    </select><br><br>
+                    <label id="country">Country:</label>
+                    <select id="country" name="Country" required>
+                        <option value="USA">United States of America</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                    </select><br><br>
+                    <label id="phone">Phone Number:</label>
+                    <input type="number" id="first">
+            </fieldset>
+
+            <fieldset>
+                <legend><b>Credit Card Information</b></legend>
+                    <label id="card1">VISA</label>
+                    <input type="radio" id="card1" name="cardthing" value="visa">
+                    <label id="card2">MASTERCARD</label>
+                    <input type="radio" id="card2" name="cardthing" value="mastercard">
+                    <label id="card3">AMERICAN EXPRESS</label>
+                    <input type="radio" id="card3" name="cardthing" value="american-express"><br><br>
+                    <label type="card">Card Number</label>
+                    <input type="number" id="card" required>
+                    <label id="exp">Card Expiration Date</label>
+                    <input type="date" id="exp" value="yyyy-mm-dd" min="2022-01-01" max="2026-12-31" required><br><br>
+                    <label id="cvc">CVC Code</label>
+                    <input type="number" id="cvc" required>
+            </fieldset><br><br>
+            <input class="submit" type="submit" value="submit"><br><br>
+        </form>
+    </div>
+    
+    <div id="b">
+       <p> We at <i>Brushes n Broomsticks</i> genuinely appreciate your business, and we’re grateful for the trust you’ve placed in us. We hope you are satisfied with your purchase. Here we will provide only the best hand crafted goods.</p>
+        
+       <p> Starting today you can recieve one of a kind customize: stickers, paintings, logos, digital art, etc. Soon we will be expanding into creating shirts, mug, jackets, hoodies, etc. 
+        <br></p>
+        <p>If you wish to contact the creator, Ari, please click the "contact" tag to find her email address. If you wish to get some insight on the artist and her story please click the "About Artist". Thank you for choosing us for your artistic needs.</p>
+    </div>
+    </div>
+
+    <footer>
+        <p>All Rights Reserved &copy 2022</p>
+        <address> 6997 N Glen Harbor Blvd <br>
+        Glendale <br>
+        AZ 85307</address>
+    </footer>
+</body>
+</html>
