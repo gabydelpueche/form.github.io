@@ -154,15 +154,17 @@
             <fieldset>
                 <legend><b>Billing Information</b></legend>
                     <label id="first">First Name:</label>
-                    <input type="text" id="first" name="fname" required><br><br>
+                    <input type="text" id="first" name="fname" pattern="^[a-zA-Z]*[^0-9]" required><br><br>
                     <label id="last">Last Name:</label>
-                    <input type="text" id="last" name="lname" required><br><br>
+                    <input type="text" id="last" name="lname" pattern="^[a-zA-Z]*[^0-9]" required><br><br>
                     <label id="addy1">Address Line:</label>
-                    <input type="text" id="addy1" required><br><br>
+                    <input type="text" id="addy1"  pattern="^[0-9]+\s[a-zA-Z]+"  required><br><br>
                     <label id="addy2">Address Line(2):</label>
-                    <input type="text" id="addy2"><br><br>
+                    <input type="text" id="addy2"  pattern="^[0-9]+\s[a-zA-Z]+"><br><br>
                     <label id="city">City:</label>
-                    <input type="text" id="city" required><br><br>
+                    <input type="text" id="city" pattern="^[a-zA-Z]*" required><br><br>
+                    <label id="zip">Zip Code:</label>
+                    <input type="text" id="zip" pattern="^[0-9]{5}">
                     <label id="state">State:</label>
                     <select id="state" name="State" required>
                         <option value="az">Arizona</option>
@@ -176,7 +178,9 @@
                         <option value="UK">United Kingdom</option>
                     </select><br><br>
                     <label id="phone">Phone Number:</label>
-                    <input type="number" id="first">
+                    <input type="text" id="first" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    <label id="eMail">Email:</label>
+                    <input type="text" id="eMail" pattern="^[a-zA-Z0-9]+.[a-zA-Z0-9]+.[a-zA-Z]+" required>
             </fieldset>
 
             <fieldset>
@@ -188,11 +192,11 @@
                     <label id="card3">AMERICAN EXPRESS</label>
                     <input type="radio" id="card3" name="cardthing" value="american-express"><br><br>
                     <label type="card">Card Number</label>
-                    <input type="number" id="card" required>
+                    <input type="text" id="card" pattern="^[0-9]{4}-[0-9]{4}-[0-9]{4}}-[0-9]{4}" required>
                     <label id="exp">Card Expiration Date</label>
                     <input type="date" id="exp" value="yyyy-mm-dd" min="2022-01-01" max="2026-12-31" required><br><br>
                     <label id="cvc">CVC Code</label>
-                    <input type="number" id="cvc" required>
+                    <input type="text" id="cvc" pattern="^[0-9]{3}" required>
             </fieldset><br><br>
             <input class="submit" type="submit" value="submit"><br><br>
         </form>
