@@ -162,7 +162,7 @@
                     <label id="addy2">Address Line(2):</label>
                     <input type="text" id="addy2"  pattern="^[0-9]+\s[a-zA-Z]+"><br><br>
                     <label id="city">City:</label>
-                    <input type="text" id="city" pattern="^[a-zA-Z]*" required><br><br>
+                    <input type="text" id="city" pattern="^[a-zA-Z]*[^0-9]" required><br><br>
                     <label id="zip">Zip Code:</label>
                     <input type="text" id="zip" pattern="^[0-9]{5}">
                     <label id="state">State:</label>
@@ -180,7 +180,7 @@
                     <label id="phone">Phone Number:</label>
                     <input type="text" id="first" pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}">
                     <label id="eMail">Email:</label>
-                    <input type="text" id="eMail" pattern="^[a-zA-Z0-9]+.[a-zA-Z0-9]+.[a-zA-Z]+" required>
+                    <input type="text" id="eMail" pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z]+" required>
             </fieldset>
 
             <fieldset>
